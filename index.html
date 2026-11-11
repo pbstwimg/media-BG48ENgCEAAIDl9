@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Momento</title>
+<style>
+  :root { --tinta:#111; --gris:#555; --linea:#222; --rojo:#b00020; --papel:#f7f4ec; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#e9e6dc; font-family:Georgia,"Times New Roman",serif; color:var(--tinta); }
+  .aviso { background:var(--rojo); color:#fff; text-align:center; font:600 13px/1.4 Arial,sans-serif; padding:8px 12px; letter-spacing:.5px; }
+  .pagina { max-width:1100px; margin:20px auto; background:var(--papel); padding:24px 36px 40px; box-shadow:0 2px 14px rgba(0,0,0,.25); }
+  .franja { display:flex; justify-content:space-between; font:12px Arial,sans-serif; color:var(--gris); border-bottom:1px solid var(--linea); padding-bottom:6px; }
+  .cabecera { text-align:center; border-bottom:4px double var(--linea); padding:10px 0 12px; }
+  .cabecera h1 { margin:0; font-size:72px; letter-spacing:-1px; font-family:"Playfair Display",Georgia,serif; font-weight:900; }
+  .cabecera h1 span { color:var(--rojo); }
+  .lema { font:italic 14px Georgia,serif; color:var(--gris); margin-top:2px; }
+  nav { display:flex; gap:22px; justify-content:center; font:700 12px Arial,sans-serif; text-transform:uppercase; letter-spacing:1px; padding:10px 0; border-bottom:1px solid var(--linea); flex-wrap:wrap; }
+  nav a { color:var(--tinta); text-decoration:none; }
+  nav a:hover { color:var(--rojo); }
+  .grid { display:grid; grid-template-columns:2.2fr 1fr; gap:28px; margin-top:20px; }
+  .kicker { font:700 12px Arial,sans-serif; color:var(--rojo); text-transform:uppercase; letter-spacing:1.5px; }
+  h2.titular { font-size:44px; line-height:1.05; margin:6px 0 10px; font-weight:900; }
+  .sumario { font-size:19px; line-height:1.35; color:#333; margin:0 0 12px; }
+  .firma { font:12px Arial,sans-serif; color:var(--gris); margin-bottom:14px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:6px 0; }
+  figure { margin:0 0 14px; }
+  figure img, .placeholder { width:100%; display:block; background:#ccc; }
+  .placeholder { aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; font:14px Arial,sans-serif; color:#444; text-align:center; padding:20px; border:2px dashed #888; }
+  figcaption { font:12px/1.4 Arial,sans-serif; color:var(--gris); padding-top:5px; }
+  .cuerpo { column-count:2; column-gap:26px; column-rule:1px solid #ccc; font-size:16px; line-height:1.55; text-align:justify; hyphens:auto; }
+  .cuerpo p { margin:0 0 12px; }
+  .cuerpo p:first-child::first-letter { float:left; font-size:56px; line-height:.85; padding:4px 6px 0 0; font-weight:900; }
+  aside .caja { border-top:3px solid var(--tinta); padding-top:8px; margin-bottom:22px; }
+  aside h3 { margin:0 0 6px; font-size:19px; line-height:1.2; }
+  aside p { margin:0 0 6px; font-size:14px; line-height:1.45; color:#333; }
+  aside .cat { font:700 11px Arial,sans-serif; color:var(--rojo); text-transform:uppercase; letter-spacing:1px; }
+  .recuadro { background:#efe9d8; border-left:4px solid var(--rojo); padding:10px 12px; font:14px/1.45 Arial,sans-serif; }
+  footer { margin-top:26px; border-top:4px double var(--linea); padding-top:10px; font:11px Arial,sans-serif; color:var(--gris); text-align:center; }
+  @media (max-width:800px){ .grid{grid-template-columns:1fr;} .cuerpo{column-count:1;} .cabecera h1{font-size:44px;} h2.titular{font-size:32px;} .pagina{padding:16px;} }
+</style>
+</head>
+<body>
+<div class="aviso">asociacion de PERIODISMO ·</div>
+
+<div class="pagina">
+  <div class="franja">
+    <span>Miércoles 11 de noviembre de 2026</span>
+    <span>Edición digital · Año I, No. 1</span>
+    <span>Proyecto gubernamental</span>
+  </div>
+
+  <header class="cabecera">
+    <h1>Al <span>Momento</span></h1>
+    <div class="lema">La información cuando importa</div>
+  </header>
+
+  <nav>
+    <a href="#">Local</a><a href="#">Nacional</a><a href="#">Seguridad</a><a href="#">Educación</a><a href="#">Deportes</a><a href="#">Opinión</a>
+  </nav>
+
+  <div class="grid">
+    <main>
+      <div class="kicker">Seguridad </div>
+      <h2 class="titular">Mueren dos personas tras incidente en la Preparatoria 23 de santa Catarina, nuevo leon</h2>
+      <p class="sumario">Paramédicos atendieron a los lesionados en el exterior del plantel; autoridades iniciaron las investigaciones para esclarecer los hechos.</p>
+      <div class="firma"><strong>Por: jords el puto amo</strong> · santa Catarina, N. L. · 11 de noviembre de 2026 · 16:45 h</div>
+
+      <figure>
+        <!-- Coloca aquí tu fotografía: guarda tu imagen como "foto.jpg" junto a este archivo -->
+        <img src="Santa catarina.jpg" alt="Paramédicos atienden a un lesionado en la vía pública"
+             onerror="this.outerHTML='<div class=&quot;placeholder&quot;>Guarda tu fotografía como <b>foto.jpg</b> en la misma carpeta que este archivo para que aparezca aquí.</div>'">
+        <figcaption>Paramédicos brindan atención a un lesionado. Imagen de ejercicio académico. Foto: equipo de estudiantes.</figcaption>
+      </figure>
+
+      <div class="cuerpo">
+        <p>Santa catarina, N. L.— Dos personas perdieron la vida este miércoles tras un incidente registrado en las inmediaciones de la Preparatoria 99, según el relato. Elementos de rescate acudieron al sitio tras recibir un reporte de emergencia tras una balacera en toda la colonia.</p>
+        <p>Paramédicos de la institución de auxilio, quienes arribaron minutos después, valoraron a los afectados y realizaron maniobras de atención en la banqueta, mientras personal del plantel resguardaba a los estudiantes en el interior.</p>
+        <p>De acuerdo con la versión preliminar, las autoridades acordonaron la zona y solicitaron a la población evitar la difusión de rumores mientras se confirmaban las identidades y las causas. «Pedimos esperar la información oficial», señaló un vocero de la corporación.</p>
+        <p>Padres de familia se congregaron en las afueras de la escuela en busca de noticias de sus hijos. La dirección del plantel informó que las clases quedaban suspendidas y que se emitiría un comunicado con los pasos a seguir.</p>
+        <p>Este diario continuará con la cobertura conforme se disponga de datos verificados.</p>
+        <p>La investigación seguirá abierta y se prevé que en las próximas horas se difunda un informe con los detalles del caso.</p>
+      </div>
+    </main>
+
+    <aside>
+      <div class="caja recuadro">
+        <strong>Nota de práctica:</strong> 11/11/2026 Santa Catarina Nuevo Leon Col. rincon parralense
+      </div>
+      <div class="caja">
+        <div class="cat">Educación</div>
+        <h3>Protocolos de seguridad escolar: ¿cómo prepararse?</h3>
+        <p>Especialistas  explican los pasos básicos ante una emergencia en planteles de nivel medio superior.</p>
+      </div>
+      <div class="caja">
+        <div class="cat">Local</div>
+        <h3>Piden reforzar la vigilancia en zonas escolares</h3>
+        <p>Vecinos solicitan más presencia de patrullas en horarios de entrada y salida.</p>
+      </div>
+      <div class="caja">
+        <div class="cat">Opinión</div>
+        <h3>La responsabilidad de informar sin alarmar</h3>
+        <p>Una reflexión sobre el papel del periodista ante las tragedias y el cuidado de las víctimas.</p>
+      </div>
+      <div class="caja">
+        <div class="cat">Deportes</div>
+        <h3>Equipo local avanza a la final del torneo estudiantil</h3>
+        <p>La victoria se dio por la mínima en un partido muy cerrado.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>© 2026 Al Momento · Proyecto de periodismo NL </footer>
+</div>
+</body>
+</html>
